@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{df5586ec-0f88-4933-96ef-7087cb2f6336}</ProjectGuid>
+    <RootNamespace>DaclSamHunter</RootNamespace>
+    <ProjectName>DaclSamHunter</ProjectName>
+    <TargetName>DaclSamHunter</TargetName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)lib\cryptlib-debug.lib;vssapi.lib;$(ProjectDir)lib\offreg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)lib\cryptlib-release.lib;vssapi.lib;$(ProjectDir)lib\offreg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="proxyNtCalls.cpp" />
+    <ClCompile Include="shadowMethod.cpp">
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\Manifest.res" />
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="proxyNtCallsASM.asm">
+      <FileType>Document</FileType>
+    </NASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cryptopp\3way.h" />
+    <ClInclude Include="include\cryptopp\adler32.h" />
+    <ClInclude Include="include\cryptopp\adv_simd.h" />
+    <ClInclude Include="include\cryptopp\aes.h" />
+    <ClInclude Include="include\cryptopp\aes_armv4.h" />
+    <ClInclude Include="include\cryptopp\algebra.h" />
+    <ClInclude Include="include\cryptopp\algparam.h" />
+    <ClInclude Include="include\cryptopp\allocate.h" />
+    <ClInclude Include="include\cryptopp\arc4.h" />
+    <ClInclude Include="include\cryptopp\argnames.h" />
+    <ClInclude Include="include\cryptopp\aria.h" />
+    <ClInclude Include="include\cryptopp\arm_simd.h" />
+    <ClInclude Include="include\cryptopp\asn.h" />
+    <ClInclude Include="include\cryptopp\authenc.h" />
+    <ClInclude Include="include\cryptopp\base32.h" />
+    <ClInclude Include="include\cryptopp\base64.h" />
+    <ClInclude Include="include\cryptopp\basecode.h" />
+    <ClInclude Include="include\cryptopp\bench.h" />
+    <ClInclude Include="include\cryptopp\blake2.h" />
+    <ClInclude Include="include\cryptopp\blowfish.h" />
+    <ClInclude Include="include\cryptopp\blumshub.h" />
+    <ClInclude Include="include\cryptopp\camellia.h" />
+    <ClInclude Include="include\cryptopp\cast.h" />
+    <ClInclude Include="include\cryptopp\cbcmac.h" />
+    <ClInclude Include="include\cryptopp\ccm.h" />
+    <ClInclude Include="include\cryptopp\chacha.h" />
+    <ClInclude Include="include\cryptopp\chachapoly.h" />
+    <ClInclude Include="include\cryptopp\cham.h" />
+    <ClInclude Include="include\cryptopp\channels.h" />
+    <ClInclude Include="include\cryptopp\cmac.h" />
+    <ClInclude Include="include\cryptopp\config.h" />
+    <ClInclude Include="include\cryptopp\config_align.h" />
+    <ClInclude Include="include\cryptopp\config_asm.h" />
+    <ClInclude Include="include\cryptopp\config_cpu.h" />
+    <ClInclude Include="include\cryptopp\config_cxx.h" />
+    <ClInclude Include="include\cryptopp\config_dll.h" />
+    <ClInclude Include="include\cryptopp\config_int.h" />
+    <ClInclude Include="include\cryptopp\config_misc.h" />
+    <ClInclude Include="include\cryptopp\config_ns.h" />
+    <ClInclude Include="include\cryptopp\config_os.h" />
+    <ClInclude Include="include\cryptopp\config_ver.h" />
+    <ClInclude Include="include\cryptopp\cpu.h" />
+    <ClInclude Include="include\cryptopp\crc.h" />
+    <ClInclude Include="include\cryptopp\cryptlib.h" />
+    <ClInclude Include="include\cryptopp\darn.h" />
+    <ClInclude Include="include\cryptopp\default.h" />
+    <ClInclude Include="include\cryptopp\des.h" />
+    <ClInclude Include="include\cryptopp\dh.h" />
+    <ClInclude Include="include\cryptopp\dh2.h" />
+    <ClInclude Include="include\cryptopp\dll.h" />
+    <ClInclude Include="include\cryptopp\dmac.h" />
+    <ClInclude Include="include\cryptopp\donna.h" />
+    <ClInclude Include="include\cryptopp\donna_32.h" />
+    <ClInclude Include="include\cryptopp\donna_64.h" />
+    <ClInclude Include="include\cryptopp\donna_sse.h" />
+    <ClInclude Include="include\cryptopp\drbg.h" />
+    <ClInclude Include="include\cryptopp\dsa.h" />
+    <ClInclude Include="include\cryptopp\eax.h" />
+    <ClInclude Include="include\cryptopp\ec2n.h" />
+    <ClInclude Include="include\cryptopp\eccrypto.h" />
+    <ClInclude Include="include\cryptopp\ecp.h" />
+    <ClInclude Include="include\cryptopp\ecpoint.h" />
+    <ClInclude Include="include\cryptopp\elgamal.h" />
+    <ClInclude Include="include\cryptopp\emsa2.h" />
+    <ClInclude Include="include\cryptopp\eprecomp.h" />
+    <ClInclude Include="include\cryptopp\esign.h" />
+    <ClInclude Include="include\cryptopp\factory.h" />
+    <ClInclude Include="include\cryptopp\fhmqv.h" />
+    <ClInclude Include="include\cryptopp\files.h" />
+    <ClInclude Include="include\cryptopp\filters.h" />
+    <ClInclude Include="include\cryptopp\fips140.h" />
+    <ClInclude Include="include\cryptopp\fltrimpl.h" />
+    <ClInclude Include="include\cryptopp\gcm.h" />
+    <ClInclude Include="include\cryptopp\gf256.h" />
+    <ClInclude Include="include\cryptopp\gf2n.h" />
+    <ClInclude Include="include\cryptopp\gf2_32.h" />
+    <ClInclude Include="include\cryptopp\gfpcrypt.h" />
+    <ClInclude Include="include\cryptopp\gost.h" />
+    <ClInclude Include="include\cryptopp\gzip.h" />
+    <ClInclude Include="include\cryptopp\hashfwd.h" />
+    <ClInclude Include="include\cryptopp\hc128.h" />
+    <ClInclude Include="include\cryptopp\hc256.h" />
+    <ClInclude Include="include\cryptopp\hex.h" />
+    <ClInclude Include="include\cryptopp\hight.h" />
+    <ClInclude Include="include\cryptopp\hkdf.h" />
+    <ClInclude Include="include\cryptopp\hmac.h" />
+    <ClInclude Include="include\cryptopp\hmqv.h" />
+    <ClInclude Include="include\cryptopp\hrtimer.h" />
+    <ClInclude Include="include\cryptopp\ida.h" />
+    <ClInclude Include="include\cryptopp\idea.h" />
+    <ClInclude Include="include\cryptopp\integer.h" />
+    <ClInclude Include="include\cryptopp\iterhash.h" />
+    <ClInclude Include="include\cryptopp\kalyna.h" />
+    <ClInclude Include="include\cryptopp\keccak.h" />
+    <ClInclude Include="include\cryptopp\lea.h" />
+    <ClInclude Include="include\cryptopp\lsh.h" />
+    <ClInclude Include="include\cryptopp\lubyrack.h" />
+    <ClInclude Include="include\cryptopp\luc.h" />
+    <ClInclude Include="include\cryptopp\mars.h" />
+    <ClInclude Include="include\cryptopp\md2.h" />
+    <ClInclude Include="include\cryptopp\md4.h" />
+    <ClInclude Include="include\cryptopp\md5.h" />
+    <ClInclude Include="include\cryptopp\mdc.h" />
+    <ClInclude Include="include\cryptopp\mersenne.h" />
+    <ClInclude Include="include\cryptopp\misc.h" />
+    <ClInclude Include="include\cryptopp\modarith.h" />
+    <ClInclude Include="include\cryptopp\modes.h" />
+    <ClInclude Include="include\cryptopp\modexppc.h" />
+    <ClInclude Include="include\cryptopp\mqueue.h" />
+    <ClInclude Include="include\cryptopp\mqv.h" />
+    <ClInclude Include="include\cryptopp\naclite.h" />
+    <ClInclude Include="include\cryptopp\nbtheory.h" />
+    <ClInclude Include="include\cryptopp\nr.h" />
+    <ClInclude Include="include\cryptopp\oaep.h" />
+    <ClInclude Include="include\cryptopp\oids.h" />
+    <ClInclude Include="include\cryptopp\osrng.h" />
+    <ClInclude Include="include\cryptopp\ossig.h" />
+    <ClInclude Include="include\cryptopp\padlkrng.h" />
+    <ClInclude Include="include\cryptopp\panama.h" />
+    <ClInclude Include="include\cryptopp\pch.h" />
+    <ClInclude Include="include\cryptopp\pkcspad.h" />
+    <ClInclude Include="include\cryptopp\poly1305.h" />
+    <ClInclude Include="include\cryptopp\polynomi.h" />
+    <ClInclude Include="include\cryptopp\ppc_simd.h" />
+    <ClInclude Include="include\cryptopp\pssr.h" />
+    <ClInclude Include="include\cryptopp\pubkey.h" />
+    <ClInclude Include="include\cryptopp\pwdbased.h" />
+    <ClInclude Include="include\cryptopp\queue.h" />
+    <ClInclude Include="include\cryptopp\rabbit.h" />
+    <ClInclude Include="include\cryptopp\rabin.h" />
+    <ClInclude Include="include\cryptopp\randpool.h" />
+    <ClInclude Include="include\cryptopp\rc2.h" />
+    <ClInclude Include="include\cryptopp\rc5.h" />
+    <ClInclude Include="include\cryptopp\rc6.h" />
+    <ClInclude Include="include\cryptopp\rdrand.h" />
+    <ClInclude Include="include\cryptopp\resource.h" />
+    <ClInclude Include="include\cryptopp\rijndael.h" />
+    <ClInclude Include="include\cryptopp\ripemd.h" />
+    <ClInclude Include="include\cryptopp\rng.h" />
+    <ClInclude Include="include\cryptopp\rsa.h" />
+    <ClInclude Include="include\cryptopp\rw.h" />
+    <ClInclude Include="include\cryptopp\safer.h" />
+    <ClInclude Include="include\cryptopp\salsa.h" />
+    <ClInclude Include="include\cryptopp\scrypt.h" />
+    <ClInclude Include="include\cryptopp\seal.h" />
+    <ClInclude Include="include\cryptopp\secblock.h" />
+    <ClInclude Include="include\cryptopp\secblockfwd.h" />
+    <ClInclude Include="include\cryptopp\seckey.h" />
+    <ClInclude Include="include\cryptopp\seed.h" />
+    <ClInclude Include="include\cryptopp\serpent.h" />
+    <ClInclude Include="include\cryptopp\serpentp.h" />
+    <ClInclude Include="include\cryptopp\sha.h" />
+    <ClInclude Include="include\cryptopp\sha1_armv4.h" />
+    <ClInclude Include="include\cryptopp\sha256_armv4.h" />
+    <ClInclude Include="include\cryptopp\sha3.h" />
+    <ClInclude Include="include\cryptopp\sha512_armv4.h" />
+    <ClInclude Include="include\cryptopp\shacal2.h" />
+    <ClInclude Include="include\cryptopp\shake.h" />
+    <ClInclude Include="include\cryptopp\shark.h" />
+    <ClInclude Include="include\cryptopp\simeck.h" />
+    <ClInclude Include="include\cryptopp\simon.h" />
+    <ClInclude Include="include\cryptopp\simple.h" />
+    <ClInclude Include="include\cryptopp\siphash.h" />
+    <ClInclude Include="include\cryptopp\skipjack.h" />
+    <ClInclude Include="include\cryptopp\sm3.h" />
+    <ClInclude Include="include\cryptopp\sm4.h" />
+    <ClInclude Include="include\cryptopp\smartptr.h" />
+    <ClInclude Include="include\cryptopp\sosemanuk.h" />
+    <ClInclude Include="include\cryptopp\speck.h" />
+    <ClInclude Include="include\cryptopp\square.h" />
+    <ClInclude Include="include\cryptopp\stdcpp.h" />
+    <ClInclude Include="include\cryptopp\strciphr.h" />
+    <ClInclude Include="include\cryptopp\tea.h" />
+    <ClInclude Include="include\cryptopp\threefish.h" />
+    <ClInclude Include="include\cryptopp\tiger.h" />
+    <ClInclude Include="include\cryptopp\trap.h" />
+    <ClInclude Include="include\cryptopp\trunhash.h" />
+    <ClInclude Include="include\cryptopp\ttmac.h" />
+    <ClInclude Include="include\cryptopp\tweetnacl.h" />
+    <ClInclude Include="include\cryptopp\twofish.h" />
+    <ClInclude Include="include\cryptopp\validate.h" />
+    <ClInclude Include="include\cryptopp\vmac.h" />
+    <ClInclude Include="include\cryptopp\wake.h" />
+    <ClInclude Include="include\cryptopp\whrlpool.h" />
+    <ClInclude Include="include\cryptopp\words.h" />
+    <ClInclude Include="include\cryptopp\xed25519.h" />
+    <ClInclude Include="include\cryptopp\xtr.h" />
+    <ClInclude Include="include\cryptopp\xtrcrypt.h" />
+    <ClInclude Include="include\cryptopp\xts.h" />
+    <ClInclude Include="include\cryptopp\zdeflate.h" />
+    <ClInclude Include="include\cryptopp\zinflate.h" />
+    <ClInclude Include="include\cryptopp\zlib.h" />
+    <ClInclude Include="include\main.h" />
+    <ClInclude Include="include\ntdll.h" />
+    <ClInclude Include="include\offreg.h" />
+    <ClInclude Include="include\proxyNtCalls.h" />
+    <ClInclude Include="include\shadowMethod.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\nasm.targets" />
+  </ImportGroup>
+</Project>
